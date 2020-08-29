@@ -1583,7 +1583,7 @@ Toolkit.run(
 
     // Get the user's public events
     tools.log.debug(`Getting activity for ${GH_USERNAME}`);
-    const events = await tools.github.activity.listPublicEventsForUser({
+    const events = await tools.github.activity.listEventsForUser({
       username: GH_USERNAME,
       per_page: 100,
     });
