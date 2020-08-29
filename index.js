@@ -107,8 +107,13 @@ Toolkit.run(
     const GH_USERNAME = core.getInput("USERNAME");
 
     // Get the user's public events
+//     tools.log.debug(`Getting activity for ${GH_USERNAME}`);
+//     const events = await tools.github.activity.listPublicEventsForUser({
+//       username: GH_USERNAME,
+//       per_page: 100,
+//     });
     tools.log.debug(`Getting activity for ${GH_USERNAME}`);
-    const events = await tools.github.activity.listPublicEventsForUser({
+    const events = await tools.github.activity.listEventsForUser({
       username: GH_USERNAME,
       per_page: 100,
     });
